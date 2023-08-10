@@ -12,4 +12,14 @@ Have you ever wanted to have the Ultimate Linux setup for your own power hungry 
 
 ## Getting started
 
-Insert things here about iso and flashing
+To get started we must of course head over to https://get.opensuse.org/tumbleweed/ and download the iso file from the downloads tab, I am assuming that your semi-modern pc is x86-64 so get the offline image for that.
+
+What about flashing? Use a program called Balena Etcher found here: https://etcher.balena.io and you can just plug in at least and 8GB flash drive and flash it (All data on the drive will be erased during flashing)
+
+Get out the device you want to install it to and boot into your device's boot menu, pick the flash drive and let's move onto the next step!
+
+# Installation!
+
+ighelrghleihgeiruugherighelirhgihgeirugeirh
+
+hihiehgeuarghoerhgerhgeihgeigerhgehgiegerihg
