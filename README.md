@@ -20,6 +20,18 @@ Get out the device you want to install it to and boot into your device's boot me
 
 # Installation!
 
-ighelrghleihgeiruugherighelirhgihgeirugeirh
+Go down to "Installation" and hit enter
 
-hihiehgeuarghoerhgerhgeihgeigerhgehgiegerihg
+It is recommended for you to connect to WIFI so that we can grab all the latest software 
+
+Setup your language and on the next page hit yes to enabling online repositories
+
+Select the minimal X mode (last part before we write to disk will have package selection
+
+For partitioning just go through the guided setup and keep the fs BtrFS (unless you are dual booting)
+
+Setup your locale correctly (If not correct then you might not get the closest mirrors to you)
+
+Setup your user but make sure that automatic login is unchecked because of security reasons
+
+jegierjhgeighheiuheihgeriugh (will be included with more stuff later)
