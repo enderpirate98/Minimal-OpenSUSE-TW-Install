@@ -52,4 +52,19 @@ Open Konsole and edit this file: ```sudo nano /etc/zypp/zypper.conf``` Find this
 
 This will help with zypper not reinstalling bloat every time you update
 
-more to come
+Before updating we should start debloating
+
+Here is a list of packages that I consider bloat and are safe to remove:
+- discover (plus dependencies)
+- plasma5-desktop-emojier (Emoji Selector)
+- khelpcenter5 (Help)
+- kcharselect
+- kmag
+- kmousetool
+- kompare
+- konversation
+- skanlite
+- spectacle
+- tigervnc
+- xorg-x11-Xvnc (Plus dependency)
+- more to come
