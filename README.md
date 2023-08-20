@@ -67,4 +67,7 @@ Here is a list of packages that I consider bloat and are safe to remove:
 - spectacle
 - tigervnc
 - xorg-x11-Xvnc (Plus dependency)
-- more to come
+- xterm
+- Vlc (plus dependencies)
+
+It is recommended to use YaST for this step since dependencies might not show themselves in terminal
