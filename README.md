@@ -40,12 +40,16 @@ It will have an install button but don't click that yet
 
 Turn Secure Boot off because we will need Nvidia drivers later
 
-Click on ```Software``` and disable the Kde pim suite and Kde games from installing and leave the rest as default (my system is kinda broken because of manual selections missing something important)
+Click on ```Software``` and disable the Kde pim suite and Kde games as well as office from installing and leave the rest as default (my system is kinda broken because of manual selections missing something important)
 
 Click on ```Details``` and select any more packages you want to install
 
 Click on ```Install``` and watch your system install!
 
-## Additional repos
+## Debloating time!
 
-This guide is a work in progress, come back later!
+Open Konsole and edit this file: ```sudo nano /etc/zypp/zypper.conf``` Find this line: ``# installRecomends = yes`` and remove the # while also changing the yes to a no
+
+This will help with zypper not reinstalling bloat every time you update
+
+more to come
