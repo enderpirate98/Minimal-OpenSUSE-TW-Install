@@ -9,6 +9,8 @@ Have you ever wanted to have the Ultimate Linux setup for your own power hungry 
 - Power profile swiching for ultimate battery life when needed and ultimate performance for those gaming sessions
 - Gpu switching for when you need battery life or performance
 - Disabling zypper's automatic bloat install to have your SSD/HDD nice and empty for more of your files!
+- Disclaimer: I HAVE TRIED TO DEBLOAT MY SYSTEM BUT IT JUST HAS AROUND THE SAME AMOUT OF PACKAGES AS NORMAL INSTALL BUT AUDIO ISSUES COME UP!!!!!!
+
 
 ## Getting started
 
@@ -20,18 +22,30 @@ Get out the device you want to install it to and boot into your device's boot me
 
 # Installation!
 
-Go down to "Installation" and hit enter
+Go down to ```Installation``` and hit enter
 
 It is recommended for you to connect to WIFI so that we can grab all the latest software 
 
 Setup your language and on the next page hit yes to enabling online repositories
 
-Select the minimal X mode (last part before we write to disk will have package selection
+Select the Kde plasma option (last part before we write to disk will have package selection)
 
-For partitioning just go through the guided setup and keep the fs BtrFS (unless you are dual booting)
+Partitioning: go through the guided setup doing these: check ```LLVM``` and ```drive encryption``` after that keep the fs BtrFS (unless dual booting with windows)
 
 Setup your locale correctly (If not correct then you might not get the closest mirrors to you)
 
 Setup your user but make sure that automatic login is unchecked because of security reasons
 
-jegierjhgeighheiuheihgeriugh (will be included with more stuff later)
+It will have an install button but don't click that yet
+
+Turn Secure Boot off because we will need Nvidia drivers later
+
+Click on ```Software``` and disable the Kde pim suite and Kde games from installing and leave the rest as default (my system is kinda broken because of manual selections missing something important)
+
+Click on ```Details``` and select any more packages you want to install
+
+Click on ```Install``` and watch your system install!
+
+## Additional repos
+
+This guide is a work in progress, come back later!
