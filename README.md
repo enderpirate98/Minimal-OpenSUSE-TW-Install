@@ -71,3 +71,13 @@ Here is a list of packages that I consider bloat and are safe to remove:
 - Vlc (plus dependencies)
 
 It is recommended to use YaST for this step since dependencies might not show themselves in terminal
+
+What about the remaining packages in the start menu?
+
+The remaining bloat cannot be removed without the underlying system also being removed so we will have to do a different method...
+
+#### Debloating 2 electric boogaloo!
+
+Right click on the start menu button and hit ``Edit Applications...``
+
+We can then use the menu editor to remove the shortcuts by hitting ``Delete``&``Save`` (we can pretend the bloat is gone!)
