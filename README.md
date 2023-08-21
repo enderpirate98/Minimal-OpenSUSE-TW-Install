@@ -129,7 +129,7 @@ sudo zypper in flatpak && flatpak remote-add --if-not-exists flathub https://dl.
 ```
 Reboot after all those installs and now the gaming software!
 ```
-flatpak install yuzu atlauncher steam && sudo zypper in steam devices
+flatpak install yuzu atlauncher com.valvesoftware.Steam && sudo zypper in steam devices
 ```
 With all that installed it is time to optimize the system for togglable battery/performance!
 
