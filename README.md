@@ -111,12 +111,18 @@ My preferred web browser of choise is Vivaldi because of it's private nature and
 sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper in vivaldi-stable
 ```
 My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
-```
+``
 sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper dup
 ```
 For best video playback we of course need codecs
 ```
 sudo zypper in opi && opi codecs
+```
+Rather than using the default Bash shell there is one called Fish that auto suggests commands when based on my command history
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/shells:fish:release:3/openSUSE_Tumbleweed/shells:fish:release:3.repo
+sudo zypper ref
+sudo zypper in fish
 ```
 For gaming I use flatpak because of its advantages over traditional packages
 ```
@@ -130,4 +136,17 @@ With all that installed it is time to optimize the system for togglable battery/
 
 ## Ultimate Performance and Battery life!
 
-I'm tired so come back later
+There are two packages that we will install that can make your laptop either have the best performance or the best battery life denpending on which mode you prefer
+```
+sudo zypper in git
+cd Downloads/
+git clone https://github.com/bayasdev/envycontrol
+cd envycontrol/
+sudo pip install . --break-system-packages
+```
+After that reboot and we will install the widget to go along with it
+
+Right click start menu button > ``Add Widgets`` > ``Get New Widgets`` > ``Download New Plasma Widgets`` and search for optimus gpu switcher and install the one from enlroma
+
+We will reboot and install the 2nd package
+
