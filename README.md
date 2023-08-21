@@ -121,9 +121,7 @@ sudo zypper in opi && opi codecs
 Rather than using the default Bash shell there is one called Fish that auto suggests commands when based on my command history
 
 ```
-sudo zypper addrepo https://download.opensuse.org/repositories/shells:fish:release:3/openSUSE_Tumbleweed/shells:fish:release:3.repo
-sudo zypper ref
-sudo zypper in fish
+sudo zypper addrepo https://download.opensuse.org/repositories/shells:fish:release:3/openSUSE_Tumbleweed/shells:fish:release:3.repo && sudo zypper ref && sudo zypper in fish
 ```
 For gaming I use flatpak because of its advantages over traditional packages
 ```
@@ -139,11 +137,7 @@ With all that installed it is time to optimize the system for togglable battery/
 
 There are two packages that we will install that can make your laptop either have the best performance or the best battery life denpending on which mode you prefer
 ```
-sudo zypper in git
-cd Downloads/
-git clone https://github.com/bayasdev/envycontrol
-cd envycontrol/
-sudo pip install . --break-system-packages
+sudo zypper in git && cd Downloads/ && git clone https://github.com/bayasdev/envycontrol && cd envycontrol/ && sudo pip install . --break-system-packages
 ```
 
 After that reboot and we will install the widget to go along with it
@@ -167,11 +161,9 @@ I have already written a guide on making your system look like CachyOS a Linux d
 https://github.com/enderpirate98/Cachyos-look-and-feel/
 
 As for the Grub Theme here you go
+
 ```
-cd Downloads/
-git clone https://github.com/vinceliuice/grub2-themes
-cd grub2-themes
-sudo ./install.sh -t tela -s 2k
+cd Downloads/ && git clone https://github.com/vinceliuice/grub2-themes && cd grub2-themes && sudo ./install.sh -t tela -s 2k
 ```
 
 Those are the options but your device and preferences will be different so please check
