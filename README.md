@@ -111,7 +111,7 @@ My preferred web browser of choise is Vivaldi because of it's private nature and
 sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper in vivaldi-stable
 ```
 My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
-``
+```
 sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper dup
 ```
 For best video playback we of course need codecs
@@ -119,6 +119,7 @@ For best video playback we of course need codecs
 sudo zypper in opi && opi codecs
 ```
 Rather than using the default Bash shell there is one called Fish that auto suggests commands when based on my command history
+
 ```
 sudo zypper addrepo https://download.opensuse.org/repositories/shells:fish:release:3/openSUSE_Tumbleweed/shells:fish:release:3.repo
 sudo zypper ref
@@ -144,9 +145,53 @@ git clone https://github.com/bayasdev/envycontrol
 cd envycontrol/
 sudo pip install . --break-system-packages
 ```
+
 After that reboot and we will install the widget to go along with it
 
 Right click start menu button > ``Add Widgets`` > ``Get New Widgets`` > ``Download New Plasma Widgets`` and search for optimus gpu switcher and install the one from enlroma
 
 We will reboot and install the 2nd package
 
+```
+sudo zypper in power-profiles-daemon && sudo systemctl enable power-profiles-daemon
+```
+
+If you have the problem of a 4k screen on your laptop we can also gain battery life by going into the system settings and lowering the resolution to 2560x1600 in my case but yours could very, the important thing here is making sure to select one that is the same aspect ratio and not go down to low because your image won't be as sharp as you want it
+
+Reboot and when you click on the battery icon you will notice a new slider full of different power profiles as well as the other widget where you can control which gpu to use
+
+## Installing custom Kde Plasma theme and grub theme
+
+I have already written a guide on making your system look like CachyOS a Linux distro that looks AMAZING
+
+https://github.com/enderpirate98/Cachyos-look-and-feel/
+
+As for the Grub Theme here you go
+```
+cd Downloads/
+git clone https://github.com/vinceliuice/grub2-themes
+cd grub2-themes
+sudo ./install.sh -t tela -s 2k
+```
+
+Those are the options but your device and preferences will be different so please check
+
+Also go into YaST and change grub to be the same resolution that you picked
+
+During your reboot you should see a good looking theme and hopefully HIDPI scaling is corect, if not run the script again but tinker around and see what works
+
+## Vivaldi Configuration
+
+We have been here long enough and Vivaldi is constantly changing it's ways so I will just cover it briefly
+
+There are 4 extensions that I refuse to go without
+
+Plasma Browser Integration: https://chrome.google.com/webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai
+
+Bitwarden Password Manager: https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb
+
+Ublock Origin: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+
+Dark Reader: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
+
+I have been at this all day today so I will finish the last part of this some other time
