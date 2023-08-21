@@ -98,4 +98,26 @@ Again we will remove what we don't need:
 - XScreenSaver Settings
 
 
-More to come
+## Repo setup
+
+After all that debloating you are now good to update your system with ```sudo zypper dup``` and reboot if it tells you to with ```sudo reboot```
+
+We now need to get a communtiy maintained repo such as Packman to get access to additional software such as codecs and other unoffical software that you might want
+
+```sudo zypper ar -cfp 90 https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/ packman``` ```sudo zypper dup --from packman --allow-vendor-change```
+
+My preferred web browser of choise is Vivaldi because of it's private nature and customizability
+
+```sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper in vivaldi-stable```
+
+My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
+
+```sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper dup```
+
+For best video playback we of course need codecs
+
+```sudo zypper in opi && opi codecs```
+
+For gaming I use flatpak because of its advantages over traditional packages
+
+```sudo zypper in flatpak and more to come
