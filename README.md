@@ -112,7 +112,7 @@ sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper
 ```
 My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
 ```
-sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper dup
+sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper in nvidia-driver-G06-kmp-default
 ```
 For best video playback we of course need codecs
 ```
