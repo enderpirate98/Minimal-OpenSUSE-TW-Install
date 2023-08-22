@@ -68,7 +68,7 @@ Here is a list of packages that I don't want and are safe to remove without brea
 - tigervnc
 - xorg-x11-Xvnc (Plus dependency)
 - xterm
-- Vlc (plus dependencies)
+
 
 It is recommended to use YaST Software for this step since dependencies might not show themselves in terminal
 
@@ -152,11 +152,13 @@ Reboot and when you click on the battery icon you will notice a new slider full 
 
 ## Installing custom Kde Plasma theme and grub theme
 
-I have already written a guide on making your system look like CachyOS a Linux distro that looks AMAZING
+Go into Appearance>Global Theme>``Get New Global Theme`` and pick one that is right for you
 
-https://github.com/enderpirate98/Cachyos-look-and-feel/
+I love this one made by the CachyOS team and I have written a guide on it: https://github.com/enderpirate98/Cachyos-look-and-feel/
 
-As for the Grub Theme here you go
+As for Grub themeing go to https://store.kde.org/browse?cat=109 Instructions for theme install should hopefully be provided by creator of said theme
+
+I like the Tela theme by vinceliuice
 
 ```
 cd Downloads/ && git clone https://github.com/vinceliuice/grub2-themes && cd grub2-themes && sudo ./install.sh -t tela -s 2k
