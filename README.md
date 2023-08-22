@@ -46,15 +46,15 @@ Click on ```Details``` and select any more packages you want to install
 
 Click on ```Install``` and watch your system install!
 
-## Debloating time!
+## Optional: Remove unwanted packages
 
 Open Konsole and edit this file: ```sudo nano /etc/zypp/zypper.conf``` Find this line: ``# installRecomends = yes`` and remove the # while also changing the yes to a no
 
-This will help with zypper not reinstalling bloat every time you update
+This will help with zypper not reinstalling unneeded packages every time you update
 
-Before updating we should start debloating
+Before updating we remove any packages that we don't want (this may be different for you so do your own research into each package)
 
-Here is a list of packages that I consider bloat and are safe to remove:
+Here is a list of packages that I don't want and are safe to remove without breaking the system as a whole:
 - discover (plus dependencies)
 - plasma5-desktop-emojier (Emoji Selector)
 - khelpcenter5 (Help)
@@ -70,13 +70,13 @@ Here is a list of packages that I consider bloat and are safe to remove:
 - xterm
 - Vlc (plus dependencies)
 
-It is recommended to use YaST for this step since dependencies might not show themselves in terminal
+It is recommended to use YaST Software for this step since dependencies might not show themselves in terminal
 
 What about the remaining packages in the start menu?
 
-The remaining bloat cannot be removed without the underlying system also being removed so we will have to do a different method...
+The remaining packages cannot be removed without the underlying system also being removed so we will have to do a different method...
 
-#### Debloating 2 electric boogaloo!
+#### Optional: Declutter start menu
 
 Right click on the start menu button and hit ``Edit Applications...``
 
@@ -105,10 +105,6 @@ After all that debloating you are now good to update your system with ``sudo zyp
 We now need to get a communtiy maintained repo such as Packman to get access to additional software such as codecs and other unoffical software that you might want
 ```
 sudo zypper ar -cfp 90 https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/ packman && sudo zypper dup --from packman --allow-vendor-change
-```
-My preferred web browser of choise is Vivaldi because of it's private nature and customizability
-```
-sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper in vivaldi-stable
 ```
 My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
 ```
@@ -172,18 +168,34 @@ Also go into YaST and change grub to be the same resolution that you picked
 
 During your reboot you should see a good looking theme and hopefully HIDPI scaling is corect, if not run the script again but tinker around and see what works
 
-## Vivaldi Configuration
+## Web Browser
 
-We have been here long enough and Vivaldi is constantly changing it's ways so I will just cover it briefly
+Which Web Browser do I use?
 
-There are 4 extensions that I refuse to go without
+I prefer Vivaldi due to it's privacy and Customization but feel free to go with any other options.
 
-Plasma Browser Integration: https://chrome.google.com/webstore/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai
+Vivaldi
+```
+sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper in vivaldi-stable
+```
+Chrome
+```
+flatpak install flathub com.google.Chrome
+```
+Firefox is already preinstalled but if you want to switch it out for the flatpak version here you go
+```
+sudo zypper rm mozillafirefox mozillafirefox-branding-opensuse && flatpak install flathub org.mozilla.firefox
+```
+Any other Web Browser you could want should also be avalible in flatpak format but if not then feel free to look up how to install those on OpenSUSE Tumbleweed
 
-Bitwarden Password Manager: https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb
+There are 4 extensions that I use myself that you can get through the Chrome web store or Firefox addons but feel free to use what you like
 
-Ublock Origin: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+Plasma Browser Integration: It gives you media control options in one of the taskbar widgets
 
-Dark Reader: https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
+Bitwarden Password Manager: Rather than using the same password for everything you now can have randomly generated ones stored in a secure database only you have access to for better personal security
 
-I have been at this all day today so I will finish the last part of this some other time
+Ublock Origin: A content blocker that protects you from harmful websites and annoying ads
+
+Dark Reader: This forces every website you visit to be in dark mode so that your eyes won't burn at certain times of the day (or night)
+
+This is still a work in progress so nothing is finished.
