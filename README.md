@@ -78,24 +78,24 @@ The remaining packages cannot be removed without the underlying system also bein
 
 #### Optional: Declutter start menu
 
-Right click on the start menu button and hit ``Edit Applications...``
+~~Right click on the start menu button and hit ``Edit Applications...``~~
 
-We can then use the menu editor to remove the shortcuts by hitting ``Delete``&``Save`` (we can pretend the bloat is gone!)
+~~We can then use the menu editor to remove the shortcuts by hitting ``Delete``&``Save`` (we can pretend the bloat is gone!)~~
 
-Again we will remove what we don't need:
-- Ark
-- Crashed Proccess Viewer
-- File Manager - Super User Mode
-- Gwenview
-- Info Center
-- Kate
-- KWalletManager
-- Menu Editor
-- Okular
-- Terminal - Super User Mode
-- Wacome Tablet Finder
-- XScreenSaver
-- XScreenSaver Settings
+~~Again we will remove what we don't need:~~
+- ~~Ark~~
+- ~~Crashed Proccess Viewer~~
+- ~~File Manager - Super User Mode~~
+- ~~Gwenview~~
+- ~~Info Center~~
+- ~~Kate~~
+- ~~KWalletManager~~
+- ~~Menu Editor~~
+- ~~Okular~~
+- ~~Terminal - Super User Mode~~
+- ~~Wacome Tablet Finder~~
+- ~~XScreenSaver~~
+- ~~XScreenSaver Settings~~
 
 
 ## Repo setup
