@@ -1,6 +1,6 @@
 # Introduction
 
-Have you ever wanted to have the Ultimate Linux setup for your own power hungry Nvidia powered laptop? Well I have the ultimate guide on how to configure your OpenSUSE Tumbleweed system to the best it can be, I myself have been tinkering around with my own setup for the past few months so I have a great system that you can replicate at home!
+Have you ever wanted to have the Ultimate Linux setup for your own power hungry Nvidia powered laptop? Well I have the ultimate guide on how to configure your OpenSUSE Tumbleweed system to the best it can be. I myself have been tinkering around with my own setup for the past few months so I have a great system that you can replicate at home!
 
 ## What will this guide cover?
 
@@ -64,7 +64,7 @@ Here is a list of packages that I don't want and are safe to remove without brea
 - kompare
 - konversation
 - skanlite
-- spectacle
+- spectacle (I prefer flameshot)
 - tigervnc
 - xorg-x11-Xvnc (Plus dependency)
 - xterm
@@ -182,11 +182,11 @@ sudo zypper ar https://repo.vivaldi.com/archive/vivaldi-suse.repo && sudo zypper
 ```
 Chrome
 ```
-flatpak install flathub com.google.Chrome
+flatpak install com.google.Chrome
 ```
 Firefox is already preinstalled but if you want to switch it out for the flatpak version here you go
 ```
-sudo zypper rm mozillafirefox mozillafirefox-branding-opensuse && flatpak install flathub org.mozilla.firefox
+sudo zypper rm mozillafirefox mozillafirefox-branding-opensuse && flatpak install org.mozilla.firefox
 ```
 Any other Web Browser you could want should also be avalible in flatpak format but if not then feel free to look up how to install those on OpenSUSE Tumbleweed
 
@@ -200,4 +200,14 @@ Ublock Origin: A content blocker that protects you from harmful websites and ann
 
 Dark Reader: This forces every website you visit to be in dark mode so that your eyes won't burn at certain times of the day (or night)
 
-This is still a work in progress so nothing is finished.
+## Additional things
+
+For screenshots I use Flameshot which works pretty well
+```
+flatpak install org.flameshot.Flameshot
+```
+I have not tried it out myself but someone on reddit suggested additional sudo configuration
+
+https://en.opensuse.org/SDB:Administer_with_sudo
+
+This Guide is still in development so please be patient with me :)
