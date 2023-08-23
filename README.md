@@ -212,4 +212,8 @@ I have not tried it out myself but someone on reddit suggested additional sudo c
 
 https://en.opensuse.org/SDB:Administer_with_sudo
 
+If you want a good MS Office clone there is OnlyOffice
+```
+flatpak install org.onlyoffice.desktopeditors
+```
 This Guide is still in development so please be patient with me :)
