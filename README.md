@@ -70,6 +70,8 @@ Here is a list of packages that I don't want and are safe to remove without brea
 - xterm
 
 
+As a reminder do your own research into what packages you need and ones you don't but these ones I don't need
+
 It is recommended to use YaST Software for this step since dependencies might not show themselves in terminal
 
 ~~What about the remaining packages in the start menu?~~
