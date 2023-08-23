@@ -30,7 +30,7 @@ Setup your language and on the next page hit yes to enabling online repositories
 
 Select the Kde plasma option (last part before we write to disk will have package selection)
 
-Partitioning: go through the guided setup doing these: check ```LLVM``` and ```drive encryption``` after that keep the fs BtrFS (unless dual booting with windows)
+Partitioning: go through the guided setup doing these: check ``LVM`` and ``drive encryption`` after that keep the fs BtrFS
 
 Setup your locale correctly (If not correct then you might not get the closest mirrors to you)
 
@@ -55,7 +55,7 @@ This will help with zypper not reinstalling unneeded packages every time you upd
 Before updating we remove any packages that we don't want (this may be different for you so do your own research into each package)
 
 Here is a list of packages that I don't want and are safe to remove without breaking the system as a whole:
-- discover (plus dependencies)
+- discover (plus dependencies) (We have YaST Software)
 - plasma5-desktop-emojier (Emoji Selector)
 - khelpcenter5 (Help)
 - kcharselect
@@ -72,9 +72,9 @@ Here is a list of packages that I don't want and are safe to remove without brea
 
 It is recommended to use YaST Software for this step since dependencies might not show themselves in terminal
 
-What about the remaining packages in the start menu?
+~~What about the remaining packages in the start menu?~~
 
-The remaining packages cannot be removed without the underlying system also being removed so we will have to do a different method...
+~~The remaining packages cannot be removed without the underlying system also being removed so we will have to do a different method...~~
 
 #### Optional: Declutter start menu
 
@@ -119,13 +119,13 @@ Rather than using the default Bash shell there is one called Fish that auto sugg
 ```
 sudo zypper addrepo https://download.opensuse.org/repositories/shells:fish:release:3/openSUSE_Tumbleweed/shells:fish:release:3.repo && sudo zypper ref && sudo zypper in fish
 ```
-For gaming I use flatpak because of its advantages over traditional packages
+For gaming I use flatpak because certain applications aren't avalible for this Distro otherwise
 ```
 sudo zypper in flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 Reboot after all those installs and now the gaming software!
 ```
-flatpak install yuzu atlauncher com.valvesoftware.Steam && sudo zypper in steam devices && sudo zypper rm steam
+flatpak install yuzu atlauncher && sudo zypper in steam steam devices
 ```
 With all that installed it is time to optimize the system for togglable battery/performance!
 
