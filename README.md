@@ -106,17 +106,13 @@ After all that debloating you are now good to update your system with ``sudo zyp
 
 We now need to get a communtiy maintained repo such as Packman to get access to additional software such as codecs and other unoffical software that you might want
 ```
-sudo zypper ar -cfp 90 https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/ packman && sudo zypper dup --from packman --allow-vendor-change
+sudo zypper in opi && opi codecs && sudo zypper dup --from packman --allow-vendor-change
 ```
 My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
 ```
 sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper in nvidia-driver-G06-kmp-default
 ```
-For best video playback we of course need codecs
-```
-sudo zypper in opi && opi codecs
-```
-Rather than using the default Bash shell there is one called Fish that auto suggests commands when based on my command history
+Rather than using the default Bash shell there is one called Fish that auto suggests commands when based on command history
 
 ```
 sudo zypper addrepo https://download.opensuse.org/repositories/shells:fish:release:3/openSUSE_Tumbleweed/shells:fish:release:3.repo && sudo zypper ref && sudo zypper in fish
