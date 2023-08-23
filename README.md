@@ -108,7 +108,7 @@ We now need to get a communtiy maintained repo such as Packman to get access to 
 ```
 sudo zypper in opi && opi codecs && sudo zypper dup --from packman --allow-vendor-change
 ```
-My laptop the Dell XPS 15 9510 and it came with an RTX 3050 Mobile so I need drivers
+If your laptop has a Nvidia GPU like mine you will need drivers, if your laptop does not then skip this step
 ```
 sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper in nvidia-driver-G06-kmp-default
 ```
@@ -128,17 +128,19 @@ flatpak install yuzu atlauncher && sudo zypper in steam steam devices
 With all that installed it is time to optimize the system for togglable battery/performance!
 
 ## Ultimate Performance and Battery life!
-
 There are two packages that we will install that can make your laptop either have the best performance or the best battery life denpending on which mode you prefer
+
+The first one is called Envycontrol and it enables you to disable your Nvidia GPU for better battery life when you don't need it and you can make it force your system to use it when you are gaming for better performance, again if you don't have a Nvidia GPU please skip this step
+
 ```
 sudo zypper in git && cd Downloads/ && git clone https://github.com/bayasdev/envycontrol && cd envycontrol/ && sudo pip install . --break-system-packages
 ```
 
-After that reboot and we will install the widget to go along with it
+After that reboot and we will install the widget to go along with it (skip if you don't have Nvidia GPU)
 
 Right click start menu button > ``Add Widgets`` > ``Get New Widgets`` > ``Download New Plasma Widgets`` and search for optimus gpu switcher and install the one from enlroma
 
-We will reboot and install the 2nd package
+We will reboot and install the 2nd package which (for now) is power-profiles-daemon which controls the rest of the system for battery life/performance (this application does not do anything with your GPU so Nvidia and non-Nvidia laptops will benefit from this step)
 
 ```
 sudo zypper in power-profiles-daemon && sudo systemctl enable power-profiles-daemon
