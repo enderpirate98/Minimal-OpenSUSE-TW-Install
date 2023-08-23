@@ -109,9 +109,9 @@ We now need to get a communtiy maintained repo such as Packman to get access to 
 sudo zypper in opi && opi codecs && sudo zypper dup --from packman --allow-vendor-change
 ```
 If your laptop has a Nvidia GPU like mine you will need drivers, if your laptop does not then skip this step
-```
-sudo zypper addrepo --refresh https://download.nvidia.com/opensuse/tumbleweed NVIDIA && sudo zypper in nvidia-driver-G06-kmp-default
-```
+
+YaST Software>``Configuration``>``Repositories``>``Add``>``Community Repositories``>``NVIDIA Graphics Drivers`` click yes to gpg key import and it should auto select all the packages you need
+
 Rather than using the default Bash shell there is one called Fish that auto suggests commands when based on command history
 
 ```
