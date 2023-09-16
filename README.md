@@ -2,6 +2,12 @@
 
 Have you ever wanted to have the Ultimate Linux setup for your own power hungry Nvidia powered laptop? Well I have the ultimate guide on how to configure your OpenSUSE Tumbleweed system to the best it can be. I myself have been tinkering around with my own setup for the past few months so I have a great system that you can replicate at home!
 
+## Why should I go with OpenSUSE Tumbleweed?
+
+- It is a stable rolling release distro which gives you the latest software with each update being rigorously tested to ensure your system won't break
+- It is configured out of the box to automatically backup your system into read-only system snapshots which you can rollback to when your system wasen't broken 
+- The package Manager Zypper is my favorate one out there because it displays everything in a clear and understandable way (It is also faster than DNF!)
+
 ## What will this guide cover?
 
 - OS installation
@@ -200,6 +206,12 @@ Ublock Origin: A content blocker that protects you from harmful websites and ann
 
 Dark Reader: This forces every website you visit to be in dark mode so that your eyes won't burn at certain times of the day (or night)
 
+Congrats! You have the Ultimate Linux system that will hopefully satisfy your every need!
+
+Special thanks to everyone on reddit for giving valuble feedback! https://www.reddit.com/r/openSUSE/comments/15y61z6/i_created_the_ultimate_tumbleweed_install_guide/
+
+This guide was created by me and if you want to modify this guide a distribute elsewhere feel free to do it but please credit enderpirate98 as a contributor. I am no means a software programmer nor am I an "Expert" but hopfully I am good enough as a Linux user to be helpful!
+
 ## Additional things
 
 For screenshots I use Flameshot which works pretty well
@@ -214,4 +226,6 @@ If you want a good MS Office clone there is OnlyOffice
 ```
 flatpak install org.onlyoffice.desktopeditors
 ```
-This Guide is still in development so please be patient with me :)
+Why is my Nvidia Gpu not recodnized after a kernel update?
+
+That can be fixed by going into YaST Software, searching up Nvidia and making it "update" every package already installed which will reinstall the packages so that your system will work it's best again!
